@@ -1,0 +1,122 @@
+ /* client/src/components/About.css */
+
+.about-section {
+  background-color: var(--content-background);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Column 1: Illustration --- */
+.about-image-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-illustration {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-out;
+}
+
+.about-illustration:hover {
+  transform: scale(1.03);
+}
+
+
+/* --- Column 2: Text --- */
+.about-text-container {
+  flex: 1.2; 
+  max-width: 600px;
+  /* NEW: This overrides the 'text-align: center' from the parent .section,
+     ensuring all content in this column starts from the left. */
+  text-align: left;
+}
+
+.about-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 25px; 
+  /* NEW: This applies the justified alignment as you requested. */
+  text-align: justify;
+}
+
+/* --- Highlights Section --- */
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.highlight-item:hover {
+  transform: translateX(10px);
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+.highlight-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.highlight-item p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* === RESPONSIVE DESIGN for Mobile === */
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text-container {
+    order: 1;
+    /* On mobile, we let the text be centered along with the title for a cohesive look */
+    text-align: center;
+  }
+
+  .about-image-container {
+    order: 2;
+    margin-top: 40px;
+  }
+
+  .about-paragraph {
+    /* NEW: On smaller screens, switch back to left-align. 
+       Justified text can look bad on narrow widths. */
+    text-align: left;
+  }
+  
+  .highlight-item {
+    /* Aligns the highlight items to the left within the centered container on mobile */
+    display: inline-flex;
+    text-align: left; 
+    width: auto;
+    max-width: 400px; /* Prevents them from being too wide */
+  }
+  
+  .highlight-item:hover {
+    transform: translateX(0); 
+  }
+}

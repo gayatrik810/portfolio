@@ -1,0 +1,79 @@
+ /* client/src/index.css */
+
+/* === LIGHT THEME (DEFAULT) === */
+:root {
+  --background-color: #f0f2f5;         /* Light grey background */
+  --text-color: #1c1e21;               /* Very dark grey for text */
+  --text-secondary: #606770;          /* Softer grey for sub-text */
+  --primary-color: #0062E6;            /* A strong, professional blue */
+  --card-background: #ffffff;         /* Pure white for cards */
+  --content-background: #ffffff;      /* Background for main content blocks */
+  --border-color: #dce1e6;            /* Subtle border */
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --button-text-color: #ffffff;
+}
+
+/* === DARK THEME (Inspired by your Showcase CSS) === */
+body.dark-theme {
+  --background-color: #0a192f;         /* The main navy background */
+  --text-color: #e6f1ff;               /* A soft white for text */
+  --text-secondary: #a8b2d1;          /* Lighter grey for sub-text */
+  --primary-color: #64ffda;            /* Your vibrant "tech" cyan */
+  --card-background: #0a192f;          /* Cards can share the background in this theme */
+  --content-background: #112240;      /* The slightly lighter navy for content blocks */
+  --border-color: #233554;            /* A subtle navy border */
+  --box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  --button-text-color: #0a192f;        /* Dark text for bright buttons */
+}
+
+/* === GLOBAL STYLES === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* client/src/index.css */
+
+/* Replace your existing .section-title with this */
+.section-title {
+  position: relative; /* Required for the pseudo-element positioning */
+  display: inline-block; /* Ensures the underline is only as wide as the text */
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  padding-bottom: 10px; /* Adds some space for the underline */
+}
+
+/* The animated underline pseudo-element */
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 80px; /* The final width of the underline */
+  height: 4px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* The magic: initial state is scaled to zero width */
+  transform-origin: center;
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Make the underline grow on hover */
+.section-title:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}

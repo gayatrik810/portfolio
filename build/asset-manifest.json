@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.21e56f56.css",
+    "main.js": "/static/js/main.4cdc366d.js",
+    "static/js/453.a3c1d153.chunk.js": "/static/js/453.a3c1d153.chunk.js",
+    "static/media/nss1.jpg": "/static/media/nss1.36e6db312a28ceb477bf.jpg",
+    "static/media/profile-photo.jpg": "/static/media/profile-photo.47822668386c9bc9867a.jpg",
+    "static/media/poster.jpg": "/static/media/poster.43357d345b3b996aa38b.jpg",
+    "static/media/nss2.jpg": "/static/media/nss2.a43ecb9c3400207e7c60.jpg",
+    "static/media/basketball2.jpg": "/static/media/basketball2.28556724f482c4f3a452.jpg",
+    "static/media/basketball1.jpg": "/static/media/basketball1.794ba9af8c676af25fa2.jpg",
+    "static/media/leadership1.jpg": "/static/media/leadership1.abc0b66f6ee096a9ed78.jpg",
+    "static/media/leadership2.jpg": "/static/media/leadership2.1c09cba594543eeec8af.jpg",
+    "static/media/Gayatri_Resume.pdf": "/static/media/Gayatri_Resume.7489564cc7c4c6c8cb32.pdf",
+    "static/media/hackathon1.jpg": "/static/media/hackathon1.37cb1587242a6e802fbe.jpg",
+    "static/media/about-illustration.svg": "/static/media/about-illustration.31eb9a055ae6c8142d3785886bfbbef8.svg",
+    "index.html": "/index.html",
+    "main.21e56f56.css.map": "/static/css/main.21e56f56.css.map",
+    "main.4cdc366d.js.map": "/static/js/main.4cdc366d.js.map",
+    "453.a3c1d153.chunk.js.map": "/static/js/453.a3c1d153.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21e56f56.css",
+    "static/js/main.4cdc366d.js"
+  ]
+}

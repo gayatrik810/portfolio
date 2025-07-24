@@ -1,0 +1,103 @@
+ /* client/src/components/Showcase.css */
+
+/* --- Grid Layout --- */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- The Card's Core Structure --- */
+.showcase-card {
+    display: flex;
+    flex-direction: column; /* This is correct, it stacks items vertically */
+    background-color: var(--content-background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow);
+}
+
+
+/* --- 1. The Image Container --- */
+.card-carousel {
+    /* --- CHANGE #1: IMAGES ARE NOW MUCH SMALLER --- */
+    /* Height is now 160px. This is a significant reduction. */
+    height: 240px;
+    flex-shrink: 0; /* Prevents the container from being squished */
+}
+
+.card-carousel .carousel .slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* --- 2. The Text Content Container --- */
+.card-content {
+    /* --- THE DEFINITIVE FIX FOR THE SPACE --- */
+    /* We are adding a 25px margin to the TOP of this text block. */
+    /* This physically shoves it down from the image container above it. */
+    /* This creates the guaranteed space you have been asking for. */
+    margin-top: 25px;
+
+    /* Padding is now only for the inside of the text box. */
+    padding: 0 30px 30px 30px; /* Top padding is 0 because margin is handling the space */
+    
+    flex-grow: 1; /* Allows the content area to fill remaining space */
+}
+
+/* --- Text Styling (Title) --- */
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 15px 0; /* Space below the title */
+}
+
+.card-title-icon {
+    color: var(--primary-color);
+}
+
+
+/* --- Text Styling (Description List) --- */
+.card-description-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.card-description-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.card-description-list li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-description-list li:last-child {
+    margin-bottom: 0;
+}

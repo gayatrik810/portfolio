@@ -1,0 +1,132 @@
+ /* client/src/components/Contact.css */
+
+.contact-section {
+    background-color: var(--content-background);
+    padding: 80px 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 60px; /* Increased gap for better separation */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Left Side: Contact Info --- */
+.contact-info {
+    flex: 1;
+    min-width: 320px;
+    max-width: 450px;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* --- Right Side: Contact Form --- */
+.contact-form-container {
+    flex: 1.5;
+    min-width: 320px;
+    max-width: 600px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.3); /* Uses primary color for focus ring */
+}
+
+/* A subtle placeholder color that works in both themes */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--button-text-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* --- NEW: Styling for Success and Error Messages --- */
+.result-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.result-message.success {
+    background-color: rgba(100, 255, 218, 0.15); /* Faint green from your primary color */
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.result-message.error {
+    background-color: rgba(255, 71, 87, 0.15); /* Faint red */
+    color: #ff4757;
+    border: 1px solid #ff4757;
+}

@@ -1,0 +1,40 @@
+ /* src/Footer.css */
+
+.footer {
+  /* Match the same lighter navy as the Showcase content area */
+  background-color: #112240; 
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: auto; /* Pushes footer to bottom */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-social-links a {
+  /* Use the main bright text color for icons */
+  color: #e6f1ff;
+  font-size: 2rem;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer-social-links a:hover {
+  /* Use the main accent color for hover */
+  color: #64ffda;
+  transform: translateY(-3px);
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  /* Use the main soft text color */
+  color: #a8b2d1;
+}

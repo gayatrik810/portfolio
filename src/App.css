@@ -1,0 +1,28 @@
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* You may need to import this font */
+  scroll-behavior: smooth;
+}
+
+main {
+  /* This ensures the main content area is distinct from the sticky navbar and footer */
+  display: block;
+}
+
+.section {
+  padding: 5rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
